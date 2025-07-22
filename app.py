@@ -12,7 +12,7 @@ def fetch_cricket_scores():
 
     headers = {
         "X-RapidAPI-Host": "cricbuzz-cricket.p.rapidapi.com",
-        "X-RapidAPI-Key": "ff678dde7cmsh5f7ba20e7acca27p1a9ef3jsnde5ef7ca8b21"  
+        "X-RapidAPI-Key":"ff678dde7cmsh5f7ba20e7acca27p1a9ef3jsnde5ef7ca8b21"  
     }
     response = requests.get(url, headers=headers)
     data = response.json()
@@ -58,7 +58,7 @@ def fetch_upcoming_matches():
 
     headers = {
         "X-RapidAPI-Host": "cricbuzz-cricket.p.rapidapi.com",
-        "X-RapidAPI-Key": "ff678dde7cmsh5f7ba20e7acca27p1a9ef3jsnde5ef7ca8b21"  # Replace with your RapidAPI key
+        "X-RapidAPI-Key": "ff678dde7cmsh5f7ba20e7acca27p1a9ef3jsnde5ef7ca8b21"# Replace with your RapidAPI key
     }
     #
     response = requests.get(url, headers=headers)
