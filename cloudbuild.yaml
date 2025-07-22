@@ -1,9 +1,9 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/celestial-digit-466218-b3/livecricketscores:$SHORT_SHA', '.']
+    args: ['build', '-t', 'gcr.io/celestial-digit-466218-b3/livecricketscores:latest', '.']
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/celestial-digit-466218-b3/livecricketscores:$SHORT_SHA']
+    args: ['push', 'gcr.io/celestial-digit-466218-b3/livecricketscores:latest']
 
   -  name: "gcr.io/cloud-builders/gke-deploy"
      args:
@@ -12,7 +12,7 @@ steps:
      - --location=us-central1
      - --cluster=autopilot-cluster-1
 images:
-  - 'gcr.io/celestial-digit-466218-b3/livecricketscores:$SHORT_SHA'
+  - 'gcr.io/celestial-digit-466218-b3/livecricketscores:latest'
 
 options:
   logging: CLOUD_LOGGING_ONLY
